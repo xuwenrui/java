@@ -1,0 +1,17 @@
+# eureka注册中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+# 端口号
+server:
+  port: 8883
+# 当前应用名
+spring:
+  application:
+    name: order-feign-service
+
+# 配置hystrix
+feign:
+  hystrix:
+    enabled: true
