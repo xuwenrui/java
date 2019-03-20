@@ -21,7 +21,6 @@ public class UserController {
     }
 
     private final UserviceService userviceService;
-
     @GetMapping(value="/findAll")
     public List<User> findAll(){
         return userviceService.findAll();

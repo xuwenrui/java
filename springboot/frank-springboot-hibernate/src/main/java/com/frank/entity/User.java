@@ -1,5 +1,6 @@
 package com.frank.entity;
 
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -7,19 +8,22 @@ import java.io.Serializable;
  * @author: xu.wr
  * @create: 2019-02-23 17:45
  **/
+@Entity
+@Table(name = "user")
 public class User  implements Serializable {
 
     private static final long serialVersionUID = 8655851615465363473L;
-
-    private Long id;
+    @Id
+    @GeneratedValue
+    private Integer id;
     private String username;
     private String password;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -47,7 +51,7 @@ public class User  implements Serializable {
         this.password = password;
     }
 
-    public User(Long id, String username, String password) {
+    public User(Integer id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;
