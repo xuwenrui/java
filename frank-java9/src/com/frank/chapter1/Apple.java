@@ -38,11 +38,20 @@ public class Apple {
         Apple apple3=new Apple(3,"乔纳金",80,"黄色");
         Apple apple4=new Apple(4,"黄元帅",100,"黄色");
         Apple apple5=new Apple(5,"红星",80,"红色");
+        Apple apple6=new Apple(6,"黄元帅",60,"黄色");
+        Apple apple7=new Apple(7,"红星",110,"红色");
+
+        Apple apple10=new Apple(7,"红星",110,"红色");
+        Apple apple11=new Apple(7,"红星",110,"红色");
         apples.add(apple1);
         apples.add(apple2);
         apples.add(apple3);
         apples.add(apple4);
         apples.add(apple5);
+        apples.add(apple6);
+        apples.add(apple7);
+        apples.add(apple10);
+        apples.add(apple11);
         return apples;
     }
     public static void printList(List<Apple> apples){
@@ -94,5 +103,13 @@ public class Apple {
         this.color = color;
     }
 
-
+    @Override
+    public String toString() {
+        return "Apple{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", weight=" + weight +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }
